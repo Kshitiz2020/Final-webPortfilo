@@ -14,8 +14,8 @@ body {
 .heading {
   background-image: url(/assets/sun.jpg);
   background-position: center;
-  background-size: 100%;
-  height: 900px;
+  background-size: cover;
+  height: 100vh;
   position: relative;
 }
 
@@ -75,7 +75,6 @@ body {
 }
 .project-box {
   display: flex;
-  flex-direction: row;
 }
 .project-box img {
   width: 400px;
@@ -328,6 +327,10 @@ footer > h2 {
   body {
     background-color: lightblue;
   }
+  .heading {
+    background-repeat: no-repeat;
+  }
+
   nav ul {
     display: none;
   }
@@ -359,5 +362,64 @@ footer > h2 {
   .footer {
     display: flex;
     flex-direction: column;
+  }
+  .project-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .about-text {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 1rem;
+  }
+
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-color: lightblue;
+  }
+  .heading {
+    background-repeat: no-repeat;
+  }
+  nav ul {
+    display: none;
+  }
+  .for-mobile {
+    display: block;
+  }
+
+  .btn {
+    padding: 0.5rem;
+  }
+
+  .nav-links.responsive {
+    display: block;
+    background-color: rgb(124, 129, 100);
+    position: absolute;
+    left: -700px;
+    top: 70px;
+    margin-left: 1rem;
+  }
+
+  ul.responsive li {
+    display: block;
+    margin: 1rem;
+  }
+
+  .heading,
+  .project,
+  .skill-set,
+  .project-hub,
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 400px;
   }
 }
